@@ -5,9 +5,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-env:
-  NODE_VERSION: '20'
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -32,29 +29,15 @@ jobs:
             git pull origin main
             
             echo "🔧 Installing dependencies..."
-            pnpm install --frozen-lockfile
-            
-            echo "🏗️  Building..."
-            export NODE_OPTIONS="--max-old-space-size=3072"
-            pnpm build
+            pnpm install
             
             echo "🔄 Restarting service..."
-            if pm2 list | grep -q "openmaic-malaysia"; then
-              pm2 reload openmaic-malaysia --update-env
-            else
-              pm2 start ecosystem.config.js
-            fi
-            
+            pm2 reload openmaic-malaysia --update-env || pm2 start ecosystem.config.js
             pm2 save
             
             echo "✅ Deployment complete!"
             echo "🌐 https://maic.tetupai.com"
           EOF
 
-      - name: Notify success
-        if: success()
-        run: echo "Deployment successful!"
-
-      - name: Notify failure
-        if: failure()
-        run: echo "Deployment failed!"
+      - name: Notify status
+        run: echo "Deployment finished!"
