@@ -6,8 +6,9 @@
     "loading": "Memuat..."
   },
   "home": {
-    "slogan": "Pembelajaran Generatif dalam Bilik Darjah Interaktif Pelbagai Agen",
-    "greetingWithName": "Hai, {{name}}"
+    "slogan": "Pembelajaran AI dalam Bilik Darjah Interaktif Pelbagai Agen",
+    "greetingWithName": "Selamat datang, {{name}}",
+    "greetingDefault": "Selamat datang ke OpenMAIC Malaysia"
   },
   "toolbar": {
     "pdfParser": "Penghurai",
@@ -314,7 +315,7 @@
   "upload": {
     "pdfSizeLimit": "Sokong fail PDF sehingga 50MB",
     "generateFailed": "Gagal menjana bilik darjah, sila cuba lagi",
-    "requirementPlaceholder": "Beritahu saya apa yang anda mahukan, cth:\n\"Ajar saya Python dari awal dalam 30 minit\"\n\"Terangkan Jelmaan Fourier di papan putih\"\n\"Cara main permainan papan Avalon\"",
+    "requirementPlaceholder": "Apa yang ingin anda pelajari? cth:\n\"Ajar saya Python dari awal dalam 30 minit\"\n\"Terangkan Jelmaan Fourier di papan putih\"\n\"Cara main permainan papan Catur\"",
     "requirementRequired": "Sila masukkan keperluan kursus",
     "fileTooLarge": "Fail terlalu besar. Sila pilih fail PDF kurang dari 50MB"
   },
@@ -425,7 +426,7 @@
     "agentRoles": {
       "teacher": "Guru",
       "assistant": "Pembantu",
-      "student": "Pelajar"
+      "student": "Murid"
     },
     "agentDescriptions": {
       "default-1": "Guru utama dengan penjelasan jelas dan berstruktur",
@@ -972,7 +973,7 @@
   },
   "profile": {
     "title": "Profil",
-    "defaultNickname": "Pelajar",
+    "defaultNickname": "Murid",
     "chooseAvatar": "Pilih Avatar",
     "uploadAvatar": "Muat Naik",
     "bioPlaceholder": "Ceritakan tentang diri anda — guru AI akan peribadikan pengajaran untuk anda...",

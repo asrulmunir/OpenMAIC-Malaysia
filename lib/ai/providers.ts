@@ -61,7 +61,7 @@ export const PROVIDERS: Record<ProviderId, ProviderConfig> = {
     type: 'openai',
     defaultBaseUrl: 'https://model.arasintegrasi.ai/v1',
     requiresApiKey: true,
-    icon: '/logos/openai.svg',
+    icon: '/logos/arasintegrasi.svg',
     models: [
       {
         id: 'moonshotai/Kimi-K2.6',
