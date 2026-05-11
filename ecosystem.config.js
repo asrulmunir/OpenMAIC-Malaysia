@@ -2,7 +2,7 @@ module.exports = {
   apps: [{
     name: 'openmaic-malaysia',
     script: 'pnpm',
-    args: 'start',
+    args: 'dev',
     cwd: '/home/azureuser/OpenMAIC-Malaysia',
     instances: 1,
     exec_mode: 'fork',

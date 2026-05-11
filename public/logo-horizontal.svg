@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="malaysiaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DC2626"/>
+      <stop offset="35%" style="stop-color:#FFFFFF"/>
+      <stop offset="65%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#DC2626"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB"/>
+      <stop offset="100%" style="stop-color:#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCD34D"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle with Malaysia theme -->
+  <g transform="translate(10, 5)">
+    <!-- Outer ring -->
+    <circle cx="25" cy="25" r="24" fill="none" stroke="url(#malaysiaGrad)" stroke-width="4"/>
+    
+    <!-- Blue canton -->
+    <path d="M 10,10 L 40,10 A 24,24 0 0,1 40,40 L 10,40 Z" fill="url(#blueGrad)"/>
+    
+    <!-- Crescent -->
+    <path d="M 25,15 A 10,10 0 1,1 25,35 A 8,8 0 1,0 25,15" fill="#FCD34D"/>
+    
+    <!-- Star -->
+    <polygon points="35,12 36.5,16.5 41,16.5 37.5,19.5 38.5,24 35,21 31.5,24 32.5,19.5 29,16.5 33.5,16.5" 
+             fill="#FCD34D" stroke="#F59E0B" stroke-width="0.2"/>
+    
+    <!-- Digital circuit overlay -->
+    <g opacity="0.6" stroke="#60A5FA" stroke-width="1.5" fill="none">
+      <circle cx="18" cy="18" r="2"/>
+      <circle cx="32" cy="18" r="2"/>
+      <circle cx="18" cy="32" r="2"/>
+      <circle cx="32" cy="32" r="2"/>
+      <line x1="20" y1="18" x2="30" y2="18"/>
+      <line x1="25" y1="20" x2="25" y2="30"/>
+      <line x1="18" y1="20" x2="18" y2="30"/>
+      <line x1="32" y1="20" x2="32" y2="30"/>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(70, 35)">
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#111827">
+      OpenMAIC
+    </text>
+    <text x="0" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#DC2626" letter-spacing="2">
+      M A L A Y S I A
+    </text>
+    <rect x="0" y="-25" width="4" height="15" fill="#DC2626" rx="1"/>
+    <rect x="5" y="-25" width="4" height="15" fill="#FFFFFF" rx="1"/>
+    <rect x="10" y="-25" width="4" height="15" fill="#2563EB" rx="1"/>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="70" y="52" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280" font-style="italic">
+    Pembelajaran AI Interaktif Pelbagai Agen
+  </text>
+</svg>
