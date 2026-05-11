@@ -1,0 +1,5 @@
+maic.tetupai.com {
+	reverse_proxy 127.0.0.1:3456 {
+		header_up Host 127.0.0.1:3456
+	}
+}
