@@ -54,6 +54,66 @@ export const MONO_LOGO_PROVIDERS: ReadonlySet<string> = new Set(['openai', 'open
  * Provider registry
  */
 export const PROVIDERS: Record<ProviderId, ProviderConfig> = {
+  // Aras Integrasi - Malaysia AI Provider (Default)
+  arasintegrasi: {
+    id: 'arasintegrasi',
+    name: 'Aras Integrasi',
+    type: 'openai',
+    defaultBaseUrl: 'https://model.arasintegrasi.ai/v1',
+    requiresApiKey: true,
+    icon: '/logos/openai.svg',
+    models: [
+      {
+        id: 'moonshotai/Kimi-K2.6',
+        name: 'Kimi K2.6',
+        contextWindow: 256000,
+        outputWindow: 64000,
+        capabilities: {
+          streaming: true,
+          tools: true,
+          vision: true,
+          thinking: {
+            toggleable: false,
+            budgetAdjustable: true,
+            defaultEnabled: true,
+          },
+        },
+      },
+      {
+        id: 'Qwen/Qwen3.6-35B-A3B',
+        name: 'Qwen 3.6 35B A3B',
+        contextWindow: 256000,
+        outputWindow: 32000,
+        capabilities: {
+          streaming: true,
+          tools: true,
+          vision: true,
+          thinking: {
+            toggleable: true,
+            budgetAdjustable: true,
+            defaultEnabled: false,
+          },
+        },
+      },
+      {
+        id: 'Qwen/Qwen3.5-122B',
+        name: 'Qwen 3.5 122B',
+        contextWindow: 128000,
+        outputWindow: 32000,
+        capabilities: {
+          streaming: true,
+          tools: true,
+          vision: true,
+          thinking: {
+            toggleable: true,
+            budgetAdjustable: true,
+            defaultEnabled: false,
+          },
+        },
+      },
+    ],
+  },
+
   openai: {
     id: 'openai',
     name: 'OpenAI',
@@ -1397,9 +1457,9 @@ export function parseModelString(modelString: string): {
     };
   }
 
-  // Default to OpenAI for backward compatibility
+  // Default to Aras Integrasi for Malaysia deployment
   return {
-    providerId: 'openai',
+    providerId: 'arasintegrasi',
     modelId: modelString,
   };
 }

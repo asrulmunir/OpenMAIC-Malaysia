@@ -629,8 +629,8 @@ const migrateFromOldStorage = () => {
   if (!oldLlmModel && !oldProvidersConfig) return null; // No old data
 
   // Parse model selection
-  let providerId: ProviderId = 'openai';
-  let modelId = 'gpt-5.4-mini';
+  let providerId: ProviderId = 'arasintegrasi';
+  let modelId = 'moonshotai/Kimi-K2.6';
   if (oldLlmModel) {
     const [pid, mid] = oldLlmModel.split(':');
     if (pid && mid) {
@@ -695,8 +695,8 @@ export const useSettingsStore = create<SettingsState>()(
 
       return {
         // Initial state (use migrated data if available)
-        providerId: migratedData?.providerId || 'openai',
-        modelId: migratedData?.modelId || '',
+        providerId: migratedData?.providerId || 'arasintegrasi',
+        modelId: migratedData?.modelId || 'moonshotai/Kimi-K2.6',
         thinkingConfigs: pruneThinkingConfigs(
           migratedData?.thinkingConfigs || {},
           initialProvidersConfig,
