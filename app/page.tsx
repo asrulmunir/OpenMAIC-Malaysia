@@ -511,7 +511,7 @@ function HomePage() {
             stiffness: 200,
             damping: 20,
           }}
-          className="h-12 md:h-16 mb-2 -ml-2 md:-ml-3"
+          className="h-10 md:h-12 mb-6 -ml-1 object-contain"
         />
 
         {/* ── Slogan ── */}
@@ -519,7 +519,7 @@ function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.25 }}
-          className="text-sm text-muted-foreground/60 mb-8"
+          className="text-sm text-muted-foreground/60 mb-6"
         >
           {t('home.slogan')}
         </motion.p>
